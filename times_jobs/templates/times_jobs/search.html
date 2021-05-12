@@ -1,0 +1,65 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="{% static 'times_jobs/search.css' %}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@700&family=Poppins:wght@300&family=Reem+Kufi&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+    <div class="nav-container">
+        <div class="wrapper">
+            <nav>
+                <div class="logo">
+                    YJHH.
+                </div>
+                <ul class="nav-items">
+                    <li>
+                        <a href={% url 'times_jobs-home' %}>home</a>                       
+                    </li>
+                    <li>
+                        <a href={% url 'times_jobs-about' %}>about</a>
+                    </li>
+                    <li>
+                        <a href={% url 'times_jobs-creators' %}>creator</a>                       
+                    </li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+        <div class="container">
+            <div class="card">
+                <div class="imgBx">
+                    <img src="{% static 'times_jobs/pictures/girl1.png' %}">
+                </div>
+                <div class="contentBx">
+                    <h2>
+                        Times Jobs
+                    </h2>
+                    
+                    <a href ={% url 'times_jobs-timesjobs' %} target="_blank">Tap Here</a>
+                </div>
+            </div>
+        </div>
+        <div class="bag">
+            <div class="box">
+                <div class="imgBox">
+                    <img src="{% static 'times_jobs/pictures/just.png' %}">
+                </div>
+                <div class="contentBox">
+                    <h2>
+                        Indeed
+                    </h2>
+                    
+                    <a href ={% url 'times_jobs-indeed' %} target="_blank">Tap Here</a>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

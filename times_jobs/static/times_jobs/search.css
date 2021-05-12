@@ -1,0 +1,205 @@
+*{
+    box-sizing: border-box;
+    margin:0px;
+}
+
+body{
+    font-family:"Roboto",sans-serif;
+    background-image:url("/static/times_jobs/pictures/4.png");
+    background-size:cover;
+}
+/* Navigation */
+.nav-container{
+    height: 80px;
+}
+.wrapper{
+    max-width:1800px;
+    margin: 0 auto;
+}
+nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:80px;
+}
+nav ul{
+    display: flex;
+}
+nav .logo{
+    font-family: 'Eczar',sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 85px;
+    color: white;
+
+}
+.nav-items li{
+    list-style:none;
+    margin-right:110px;
+}
+.nav-items li:nth-last-of-type(1){
+    margin:0px
+}
+.nav-items li a{
+    font-family: 'Poppins',sans-serif;
+    font-size: 33px;
+    line-height: 64px;
+    color: white;
+    text-decoration: none;
+}
+.container, .bag{
+    align-items:center;
+    justify-content:center;
+    display: flex; 
+}
+.container .card{
+    position: relative;
+    width:400px;
+    height: 550px;
+    background:linear-gradient(90deg,rgb(20, 197, 29),#ff932f);
+    border-radius: 30px;
+    overflow:hidden;
+    left:-350px;
+    top: 100px;
+
+
+}
+.bag .box{
+    position: relative;
+    width:400px;
+    height:550px;
+    background:linear-gradient(90deg,rgb(202, 19, 19),#eb4fc9);
+    border-radius: 20px;
+    overflow:hidden;
+    left:350px;
+    top: -450px;
+
+
+}
+.container .card:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(90deg,#121c72,#8c2ac5); 
+    clip-path:circle(220px at 80% 20%);
+    transition: 0.5s ease-in-out;
+
+
+}
+.bag .box:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(90deg,#451263,#1860a3); 
+    clip-path:circle(220px at 80% 20%);
+    transition: 0.5s ease-in-out;
+
+
+}
+.container .card:hover:before, .bag .box:hover:before{
+    clip-path:circle(300px at 70% -7%);
+
+}
+
+.container .card:after
+{
+    content: 'Times';
+    position: absolute;
+    top: 30%;
+    left:-20%;
+    width: 100%;
+    font-size: 11em;
+    font-weight:750;
+    font-style:italic;
+    color: rgba(255, 255, 255, 0.137);
+
+}
+.bag .box:after
+{
+    content: 'Indeed';
+    position: absolute;
+    top: 30%;
+    left:-20%;
+    width: 100%;
+    font-size: 11em;
+    font-weight:750;
+    font-style:italic;
+    color: rgba(255, 255, 255, 0.137);
+
+}
+.container .card .imgBx, .bag .box .imgBox{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height:220px;
+    transition: 0.5s;
+
+
+}
+.container .card:hover .imgBx,.bag .box:hover .imgBox {
+    top: 0%;
+    transform:translateY(0%);
+}
+.container .card .imgBx img, .bag .box .imgBox img{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+}
+.container .card .contentBx, .bag .box .contentBox{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+
+}
+.container .card:hover .contentBx, .bag .box:hover .contentBox{
+    height: 200px;
+}
+.container .card .contentBx h2, .bag .box .contentBox h2{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color:black;
+    font-size: 40px;
+}
+.container .card .contentBx a, .bag .box .contentBox a{
+    display:inline-block;
+    padding: 10px 20px;
+    background:rgb(86, 223, 51);
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    color:#111;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.5s;
+    border-radius: 30px;
+    font-size: 40px;
+
+
+
+}
+.container .card:hover .contentBx a, .bag .box:hover .contentBox a{
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+
+}
+

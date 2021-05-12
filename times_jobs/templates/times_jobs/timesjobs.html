@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimesJobs.com Scraping</title>
+    <link rel="stylesheet" href="{% static 'times_jobs/timejob.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+  
+    
+    <div class="bg-img">
+        <div class="nav-container">
+            <div class="wrapper">
+                <nav>
+                    <div class="logo">
+                        YJHH.
+                    </div>
+                    <ul class="nav-items">
+                        <li>
+                            <a href={% url 'times_jobs-home' %}>home</a>                       
+                        </li>
+                        <li>
+                            <a href={% url 'times_jobs-about' %}>about</a>
+                        </li>
+                        <li>
+                            <a href={% url 'times_jobs-creators' %}>creator</a>                       
+                        </li>
+                        
+                        <li>
+                            <a href={% url 'times_jobs-search' %}>Back</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+        
+        <div class="form-layout">
+            <form action={% url 'adder_page' %} method="POST" class="container">
+                {% csrf_token %}
+                <h2>Enter Here</h2>
+            <div class="post">
+                <label for="post" ><b>Designation</b></label>
+            </div>
+                <input type="text" placeholder="Enter Designation..."  name="post" required >
+            <div class="loc">
+                <label for="location"><b>Location</b></label>
+            </div>
+                <input type="text" placeholder="Enter Location..." name="location" required >
+            
+                <button type="submit" class="btn">Search</button>
+              </form>
+        </div>
+        
+
+    
+</div>
+
+
+</body>
+</html>

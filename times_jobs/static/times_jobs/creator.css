@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+    margin:0px;
+}
+
+body{
+    font-family:"Roboto",sans-serif;
+    background-image:url("/static/times_jobs/pictures/search.png");
+    background-size: cover;
+}
+
+/* Navigation */
+.nav-container{
+    height: 80px;
+
+}
+.wrapper{
+    max-width:1800px;
+    margin: 0 auto;
+}
+nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:80px;
+}
+nav ul{
+    display: flex;
+}
+nav .logo{
+    font-family: 'Eczar',sans-serif;
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 85px;
+    color:white;
+
+}
+.nav-items li{
+    list-style:none;
+    margin-right:110px;
+}
+.nav-items li:nth-last-of-type(1){
+    margin:0px
+}
+.nav-items li a{
+    font-family: 'Poppins',sans-serif;
+    font-size: 33px;
+    line-height: 64px;
+    color: white;
+    text-decoration: none;
+}
+        
+.header-container{
+   
+    display: flex;
+    height: calc(100vh - 82px); 
+}
+header{
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-left: -500px;
+    font-family: 'Eczar';
+    font-size: 25px;
+}
+
+header .hero-image1{
+    position: absolute;
+    width: 260px;
+    height: 241px;
+    align-items: centre;
+    top: 310px;
+    left: 800px;
+   
+
+}
+
+header .hero-content1{
+    position: absolute;
+    width: 196px;
+    height: 212px;
+    left: 1250px;
+    top: 450px;
+    color:white;
+
+}
+
+.btn{
+    font-size: 33px;
+    font-family: 'Poppins';
+    color: #000000;
+    text-decoration:none;
+    background: #aff729;
+    border-radius: 23px;
+    padding: 1px 10px;
+    display: inline-block;
+    opacity: 1;
+    transition: 0.3s;
+}
+    
+.btn:hover{
+    opacity: 0.4
+
+}

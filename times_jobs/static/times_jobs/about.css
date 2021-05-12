@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+    margin:0px;
+}
+
+body{
+    font-family:"Roboto",sans-serif;
+    background-image:url("/static/times_jobs/pictures/2.png");
+    background-size: cover;
+}
+/* Navigation */
+.nav-container{
+    height: 80px;
+    
+}
+.wrapper{
+    max-width:1800px;
+    margin: 0 auto;
+}
+nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:80px;
+}
+nav ul{
+    display: flex;
+}
+nav .logo{
+font-family: 'Eczar',sans-serif;
+font-style: normal;
+font-weight: 800;
+font-size: 42px;
+line-height: 85px;
+color: #ffffff;
+
+}
+.nav-items li{
+    list-style:none;
+    margin-right:110px;
+}
+.nav-items li:nth-last-of-type(1){
+    margin:0px
+}
+.nav-items li a{
+    font-family: 'Poppins',sans-serif;
+    font-size: 33px;
+    line-height: 64px;
+    color: #ffffff;
+    text-decoration: none;
+}
+/* Header */
+.header-wrapper{
+    max-width:1253px;
+    margin: 0 auto;
+}
+
+.header-container{
+    
+    display: flex;
+    height: calc(100vh - 82px); 
+}
+header{
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-left: -500px;
+
+}
+header h1{  
+    position:absolute; 
+    width: 160px;
+    height: 80px;
+    left: 935px;
+    top: 170px;
+    font-family: 'Encode Sans Condensed';
+    font-weight: 600;
+    font-size: 66px;
+    line-height: 80px;
+    color: #57c524;
+    
+    
+}
+header p{  
+    position:absolute;
+    text-justify: inter-word;
+    height: 200px;
+    text-align:justify;
+    top: 300px;
+    font-family: 'Darker Grotesque';
+    font-size: 32px;
+    line-height:33px;
+    color: white;
+    text-align:center;
+    right: 300px;
+    left: 300px;
+    line-height: 1.6;
+
+}
+header .hero-image1{
+    position: absolute;
+    width: 150px;
+    height: 147px;
+    left: 440px;
+    top: 620px;
+
+}
+header .hero-image2{
+    position: absolute;
+    left: 855px;
+    top: 620px;
+
+}
+header .hero-image3{
+    
+    position: absolute;
+    width: 151px;
+    height: 147px;
+    left: 1427px;
+    top: 620px;
+}
+
+.btn{
+    font-size: 33px;
+    font-family: 'Poppins';
+    color: #000000;
+    text-decoration:none;
+    background: #aff729;
+    border-radius: 23px;
+    padding: 1px 10px;
+    display: inline-block;
+    opacity: 1;
+    transition: 0.3s;
+}
+    
+.btn:hover{
+    opacity: 0.4
+
+}

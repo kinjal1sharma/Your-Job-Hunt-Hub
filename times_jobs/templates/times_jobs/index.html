@@ -1,0 +1,66 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your job Hunt Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@700&family=Poppins:wght@300&family=Reem+Kufi&display=swap" rel="stylesheet">
+    <link href= "{% static 'times_jobs/home.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-img">
+    <div class="nav-container">
+        <div class="wrapper">
+            <nav>
+                <div class="logo">
+                    YJHH. 
+                </div>
+                <ul class="nav-items">
+                    <li>
+                        <a href={% url 'times_jobs-about' %}>about</a>
+                    </li>
+                    <li>
+                        <a href={% url 'times_jobs-creators' %}>creator</a>                       
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="header-container">
+        <div class="wrapper">
+            <header>
+                <div class="hero-content">
+                    <h1> Your Job Hunt Hub </h1>
+                    <h2> Version 1.0</h2>
+                    <p> Solution for all your job searching problems.... </p>
+                    <a href={% url 'times_jobs-search' %}>Search</a>
+                </div>
+                <div class="hero-image1">
+                    <img src="{% static 'times_jobs/pictures/Avatar1Complete.png' %}" >
+                </div>
+                <div class="hero-image2">
+                    <img src="{% static 'times_jobs/pictures/Avatar2.png' %}" >
+                </div>
+                <div class="hero-image3">
+                    <img src="{% static 'times_jobs/pictures/Avatar3.png' %}" >
+                </div>
+                <div class="hero-image4">
+                    <img src="{% static 'times_jobs/pictures/Avatar4.png' %}" >
+                </div>
+                <div class="hero-image5">
+                    <img src="{% static 'times_jobs/pictures/Avatar5.png' %}" >
+                </div>
+               
+            </header>
+
+        </div>
+    </div>
+</div> 
+
+
+    
+</body>
+</html>

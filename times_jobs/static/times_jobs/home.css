@@ -1,0 +1,177 @@
+*{
+    box-sizing: border-box;
+    margin:0px;
+}
+
+body{
+    font-family:"Roboto",sans-serif;
+    background-image:url("/static/times_jobs/pictures/home.png");
+    background-size: cover;
+}
+/* Navigation */
+.nav-container{
+    height: 80px;
+   
+}
+.wrapper{
+    max-width: 1800px;
+    margin: 0 auto;
+}
+nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:80px;
+}
+nav ul{
+    display: flex;
+}
+nav .logo{
+    font-family: 'Eczar',sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 85px;
+    color: white;
+
+}
+.nav-items li{
+    list-style:none;
+    margin-right:110px;
+}
+.nav-items li:nth-last-of-type(1){
+    margin:0px
+}
+.nav-items li a{
+    font-family: 'Poppins',sans-serif;
+    font-size: 33px;
+    line-height: 64px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Header */
+
+.header-container{
+    display: flex;
+   
+}
+header{
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-left: -500px;
+
+}
+header h1{
+    font-family: 'Eczar',serif;
+    font-weight: bold;
+    font-size: 63px;
+    line-height: 124px;
+    color: #000000;
+    width:687px;
+    margin-top:240px;
+    margin-left:-400px;
+    
+}
+header h2{
+    font-family: 'Reem Kufi',sans-serif;
+    font-weight: 500px;
+    font-size: 30px;
+    line-height: 72px;
+    color: #050504;
+    width: 301px;
+    margin-top:-48px;
+    margin-left:-400px;
+
+}
+header p{
+    font-family: 'roboto';
+    font-size: 33px;
+    color: #36d136;
+    width:545px;
+    height:128px;
+    top:488px;
+    margin-bottom:20px;
+    margin-top: 20px;
+    margin-left:-400px;
+
+}
+header a{
+    font-size: 30px;
+    font-family: 'Poppins';
+    color: #000000;
+    text-decoration:none;
+    background: #aff729;
+    border-radius: 23px;
+    padding:10px 40px;
+    display: inline-block;
+    transition:300ms;
+    margin-left: -400px;
+
+}
+header a:hover{
+    transform: translateY(-8px);
+
+}
+header .hero-image1{
+    position:absolute;
+    top:10px;
+    left:1230px;
+    transition: all 0.4s ease-in-out 0s; 
+}
+
+header .hero-image1:hover{
+    cursor: default;
+    transform: rotate(12deg);
+    transition: all 0.4s ease-in-out 0s;
+
+}
+
+header .hero-image2{   
+    position: absolute;
+    top:160px;
+    left:1528px;
+    
+
+}
+
+
+
+header .hero-image3{
+    position: absolute;
+    top: 325px;
+    left: 945px;
+    transition: all 0.4s ease-in-out 0s; 
+    
+}
+header .hero-image3:hover{
+    cursor: default;
+    transform: rotate(-12deg);
+    transition: all 0.4s ease-in-out 0s;
+
+}
+
+header .hero-image4{
+    position: absolute;
+    left: 1300px;
+    top:575px;
+    transition: all 0.4s ease-in-out 0s; 
+
+
+}
+header .hero-image4:hover{
+    cursor: default;
+    transform: rotate(12deg);
+    transition: all 0.4s ease-in-out 0s;
+
+}
+header .hero-image5{
+    position:absolute;
+    top:669px;
+    left: 700px;
+}
+#bg {
+    width:100%;
+    height: 100vh 100%;
+  }

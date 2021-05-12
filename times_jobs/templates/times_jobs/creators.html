@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creators</title>
+    <link rel="stylesheet" href="{% static 'times_jobs/creator.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="nav-container">
+        <div class="wrapper">
+            <nav>
+                <div class="logo">
+                    YJHH.
+                </div>
+                <ul class="nav-items">
+                    <li>
+                        <a href={% url 'times_jobs-about' %}>about</a>
+                    </li>
+                    <li>
+                        <a href={% url 'times_jobs-home' %}>home</a>                       
+                    </li>
+                    <li>
+                        <button class="btn"><a href={% url 'times_jobs-search' %}>Search</a></button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="header-container">
+        <div class="wrapper">
+            <header>
+                
+
+                <div class="hero-content1">
+                   <h3>
+                       Kinjal Sharma
+                    </h3>
+                </div>
+                
+            
+                <div class="hero-image1">
+                    <img src="{% static 'times_jobs/pictures/Avatar5Complete.png' %}">
+                </div>
+                
+            </header>
+
+        </div>
+    </div>
+
+    
+</body>
+</html>
+ 

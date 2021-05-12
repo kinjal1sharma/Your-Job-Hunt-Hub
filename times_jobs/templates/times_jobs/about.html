@@ -1,0 +1,68 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="{% static 'times_jobs/about.css' %}" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="nav-container">
+        <div class="wrapper">
+            <nav>
+                <div class="logo">
+                    YJHH.
+                </div>
+                <ul class="nav-items">
+                    <li>
+                        <a href={% url 'times_jobs-creators' %}>creator</a>                       
+                    </li>
+                    <li>
+                        <a href={% url 'times_jobs-home' %}>home</a>
+                    </li>
+                    
+                    <li>
+                        <button class="btn"><a href={% url 'times_jobs-search' %}>Search</a></button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="header-container">
+        <div class="header-wrapper">
+            <header>
+                <div class="hero-content">
+                    <h1> About </h1>
+                    <p>
+                        Your Job Hunt Hub is a platform for all your job searching problems.My goal while making this platform was to help everyone who is looking for a job but gets stuck between multiple job search platforms like timesjobs.com, indeed.com, monster.com, etc. So instead of searching for hours or spending too much time on different websites, Your Job Hunt Hub makes your searching easy and convenient by bringing all the job search portals at one place. Helping you to find your ideal job for the best salary.
+                    </p>
+                    
+                </div>
+               
+                
+                <div class="hero-image1">
+                    <img src="{% static 'times_jobs/pictures/Avatar6.png' %}" >
+                </div>
+                <div class="hero-image2">
+                    <img src="{% static 'times_jobs/pictures/Avatar1Complete.png' %}">
+                </div>
+                <div class="hero-image3">
+                    <img src="{% static 'times_jobs/pictures/Avatar7.png' %}" >
+                </div>
+               
+               
+            </header>
+
+        </div>
+        
+    </div>
+        
+</body>
+
+
+</html>
