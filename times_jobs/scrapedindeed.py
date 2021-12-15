@@ -10,29 +10,35 @@ def get_url(post, location):
     url = template.format(post, location)
     return url
 
-def get_record(card):
-    #company name and url
+def get_record(card,):
 
-    atag = card.h2.a
-    job_title = atag.get('title')
-    job_url = 'https://in.indeed.com' + atag.get('href')
-    company = card.find('span', 'company').text.strip()
+    # job url and title
 
-    # location
+    #job_url = 'https://www.indeed.com' + slide.a.get('href')
+    title_tag = card.h2
+    job_title = title_tag.find('span').text.strip()
+    
+    #location and name of company 
 
-    job_location = card.find('div', 'recJobLoc').get('data-rc-loc')
+    tag = card.find('div', 'company_location')
+    company = tag.find('span', 'companyName').text.strip()
+    job_location = tag.find('div', 'companyLocation').text.strip()
 
-    # post date and today's date
+    #Job summary 
+    job_summary = card.find('div', 'job-snippet').text.strip()
 
+    # Post Date and extraction date
     post_date = card.find('span', 'date').text
+    
     today = datetime.today().strftime('%Y-%m-%d')
+   
+   #Job Salary
     try:
-        job_salary = card.find('span', 'salaryText').text.strip()
+        job_salary = card.find('div', 'salary-snippet-container').text.strip()
     except AttributeError:
         job_salary = ''
-
-    record = (job_title, company, job_location, post_date, today, job_salary, job_url)
-
+    #print(job_salary)
+    record = (job_title, company, job_location, post_date, today, job_summary, job_salary)
     return record
 
 def main(post, location):
@@ -42,7 +48,8 @@ def main(post, location):
     while True:
         response = requests.get(url)
         soup = BeautifulSoup(response.text, 'html.parser')
-        cards = soup.find_all("div", "jobsearch-SerpJobCard")
+        slide = soup.find('div', 'mosaic-provider-jobcards')
+        cards = slide.find_all('div', 'job_seen_beacon')
 
         for card in cards:
             record = get_record(card)
@@ -54,7 +61,9 @@ def main(post, location):
 
     with open('indeed.csv', 'w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
-        writer.writerow(['JobTitle', 'Company Name', 'Job Location', 'PostDate', 'Extract date', 'Salary', 'Url'])
+        writer.writerow(['Job Title', 'Company Name', 'Location', 'Post date', 'Today','Summary', 'Salary'])
         writer.writerows(records)
+
+
 
 
